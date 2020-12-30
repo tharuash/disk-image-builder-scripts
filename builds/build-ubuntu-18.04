@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#export BASE_ELEMENTS="bootloader ubuntu ubuntu-bionic ubuntu-18-custom"
+#export BASE_ELEMENTS="ubuntu-minimal ubuntu-18-custom"
+export BASE_ELEMENTS="bootloader ubuntu ubuntu-18-custom"
+export DIB_RELEASE="bionic"
+export ELEMENTS_PATH="./elements"
+#export IMAGE_PATH="./images/ubuntu-18.04/minimal"
+export IMAGE_PATH="./images/ubuntu-18.04"
+
+#disk-image-create ubuntu-minimal $BASE_ELEMENTS vm  -t qcow2 -o $IMAGE_PATH
+
+disk-image-create $BASE_ELEMENTS vm -t qcow2 -o $IMAGE_PATH
