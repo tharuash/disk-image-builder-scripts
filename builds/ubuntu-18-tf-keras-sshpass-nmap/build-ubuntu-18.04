@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export BASE_ELEMENTS="bootloader ubuntu ubuntu-18-custom"
+export DIB_RELEASE="bionic"
+export ELEMENTS_PATH="./elements"
+export IMAGE_PATH="./images/ubuntu-18.04"
+
+disk-image-create vm $BASE_ELEMENTS -t qcow2 -o $IMAGE_PATH
